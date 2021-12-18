@@ -1,0 +1,4 @@
+{
+    "baseUrl": "https://www.saucedemo.com/",
+    "testFiles":["**/*_spec.js"]
+}
