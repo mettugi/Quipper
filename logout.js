@@ -1,17 +1,15 @@
-describe('Logout', () => {
-    it('Logout', () => {
-      cy.visit('www.saucedemo.com')
-  
-      cy.get('[data-test="username"]')
-        .type('Standard_user')
-        .get('[data-test="password"]')
-        .type('secret_sauce')
-        .get('[data-test="login-button"]')
-        .click()
-        .get('[id="react-burger-menu-btn"]')
-        .click()
-        .get('[id="logout_sidebar_link"]')
-        .click()
+const Login = require('login.js')
+const burgerMenu = require('burger_menu.js')
+const username = "standard_user"
+const password = "secret_sauce"
 
+describe('Login', () => {
+    it('Login Valid"', () => {
+      cy.visit('https://www.saucedemo.com/')
+      Login.inputUsername(username)
+      Login.inputPassword(password)
+      Login.clickLoginButton() 
+      burgerMenu.clickBurgerMenu()
+      burgerMenu.clickLogout()
     })
   })
