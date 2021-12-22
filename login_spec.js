@@ -8,5 +8,5 @@ describe('Login', () => {
       Login.inputUsername(username)
       Login.inputPassword(password)
       Login.clickLoginButton()  
-    })
-  })
+    }
+  }
