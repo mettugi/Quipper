@@ -1,14 +1,29 @@
-describe('Burger Menu', () => {
-    it('Burger Menu', () => {
-      cy.visit('www.saucedemo.com')
-  
-      cy.get('[data-test="username"]')
-        .type('Standard_user')
-        .get('[data-test="password"]')
-        .type('secret_sauce')
-        .get('[data-test="login-button"]')
-        .click()
-        .get('[id="react-burger-menu-btn"]')
-        .click()
-    })
-  })
+module.exports={
+    burgerMenu(){
+    this.clickBurgerMenu()
+    this.clickAllItems()
+    this.clickAbout()
+    this.clickLogout()
+    this.clickResetAppState()
+  },
+  clickBurgerMenu(){
+  cy.get('[id="react-burger-menu-btn"]')
+    .click()
+  },
+  clickAllItems(){
+  cy.get('[id="inventory_sidebar_link"]')
+    .click()
+  },
+  clickAbout(){
+    cy.get('[id="about_sidebar_link"]')
+      .click()
+  },
+  clickLogout(){
+    cy.get('[id="logout_sidebar_link"]')
+      .click()
+  },
+  clickResetAppState(){
+    cy.get('[id="reset_sidebar_link"]')
+      .click()
+  }
+}
