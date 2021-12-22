@@ -11,5 +11,5 @@ describe('Login', () => {
       Login.clickLoginButton() 
       burgerMenu.clickBurgerMenu()
       burgerMenu.clickLogout()
-    })
-  })
+    }
+  }
