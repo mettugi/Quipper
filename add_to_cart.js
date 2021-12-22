@@ -1,14 +1,34 @@
-describe('Add to cart', () => {
-    it('Add to Cart Product"', () => {
-      cy.visit('www.saucedemo.com')
-  
-      cy.get('[data-test="username"]')
-        .type('Standard_user')
-        .get('[data-test="password"]')
-        .type('secret_sauce')
-        .get('[data-test="login-button"]')
-        .click()
-        .get('[data-test="add-to-cart-sauce-labs-backpack"]')
-        .click()
-    }
+module.exports={
+    addToCart(){
+    this.addToCartBackPack()
+    this.addToCartBikeLight()
+    this.addToCartBoltTshirt()
+    this.addToCartFleeceJacket()
+    this.addToCartOneSie()
+    this.addToCartTShirtRed()
+  },
+  addToCartBackPack(){
+    cy.get('[data-test="add-to-cart-sauce-labs-backpack"]')
+    .click()
+  },
+  addToCartBikeLight(){
+    cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]')
+    .click()
+  },
+  addToCartBoltTshirt(){
+    cy.get('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]')
+    .click()
+  },
+  addToCartFleeceJacket(){
+    cy.get('[data-test="add-to-cart-sauce-labs-fleece-jacket"]')
+    .click()
+  },
+  addToCartOneSie(){
+    cy.get('[data-test="add-to-cart-sauce-labs-onesie"]')
+    .click()
+  },
+  addToCartTShirtRed(){
+    cy.get('[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]')
+    .click()
+  }
   }
