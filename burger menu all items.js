@@ -4,7 +4,7 @@ const username = "standard_user"
 const password = "secret_sauce"
 
 describe('Burger Menu', () => {
-    it('Burger Menu', () => {
+    it('All Items', () => {
       cy.visit('https://www.saucedemo.com/')
       Login.inputUsername(username)
       Login.inputPassword(password)
