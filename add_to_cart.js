@@ -10,5 +10,5 @@ describe('Add to cart', () => {
         .click()
         .get('[data-test="add-to-cart-sauce-labs-backpack"]')
         .click()
-    })
-  })
+    }
+  }
