@@ -11,5 +11,5 @@ describe('Burger Menu', () => {
       Login.clickLoginButton() 
       burgerMenu.clickBurgerMenu()
       burgerMenu.clickAbout()
-    })
-  })
+    }
+  }
