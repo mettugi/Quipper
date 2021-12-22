@@ -5,6 +5,7 @@ module.exports={
     this.clickAbout()
     this.clickLogout()
     this.clickResetAppState()
+    this.clickLogout()
   },
   clickBurgerMenu(){
   cy.get('[id="react-burger-menu-btn"]')
@@ -25,5 +26,10 @@ module.exports={
   clickResetAppState(){
     cy.get('[id="reset_sidebar_link"]')
       .click()
-  }
+  },
+  clickLogout(){
+    cy.get('[id="logout_sidebar_link"]')
+      .click()
 }
+}
+
